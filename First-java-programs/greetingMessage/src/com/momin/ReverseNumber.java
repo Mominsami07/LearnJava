@@ -15,5 +15,6 @@ public class ReverseNumber {
             n/=10;
         }
         System.out.println(res);
+
     }
 }
