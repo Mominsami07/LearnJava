@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class EnglishNumberToWords {
 
@@ -60,15 +61,21 @@ public class EnglishNumberToWords {
         return result;
     }
 
-
     public static void main(String[] args) {
-        System.out.println(EnglishNumberToWords.convert(1));
-        System.out.println(EnglishNumberToWords.convert(0));
-        System.out.println(EnglishNumberToWords.convert(22));
-        System.out.println(EnglishNumberToWords.convert(44));
-        System.out.println(EnglishNumberToWords.convert(33));
-        System.out.println(EnglishNumberToWords.convert(23));
-        System.out.println(EnglishNumberToWords.convert(93));
-
+        Scanner in=new Scanner(System.in);
+        int choice=1;
+        do
+        {
+            if (choice == 1) {
+                System.out.print("Enter a number: ");
+                int n = in.nextInt();
+                System.out.println(EnglishNumberToWords.convert(n));
+            } else {
+                System.exit(0);
+            }
+            System.out.print("click 1 to run again, anything else to exit:  ");
+            choice=in.nextInt();
+        }
+        while(true);
     }
 }
